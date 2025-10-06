@@ -1,4 +1,4 @@
-# Full STack Open: Exercises 3.9.-3.11 - Deployed Phonebook
+# Full Stack Open: Exercises 3.9.-3.11 - Deployed Phonebook
 
 ## Introduction:
 
