@@ -1,3 +1,5 @@
+#Local Tests
+
 GET http://localhost:3002
 
 ###
@@ -29,5 +31,47 @@ GET http://localhost:3002/api/persons/5606561
 ###
 
 DELETE http://localhost:3002/api/persons/5606561
+
+###
+
+# Remote tests of service deployed to Render
+@baseUrl = https://fullstackopen-part-3-phonebook-f6xz.onrender.com
+
+###
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/info
+
+###
+
+GET {{baseUrl}}/api/persons
+
+###
+
+GET {{baseUrl}}/api/persons/2
+
+###
+
+POST {{baseUrl}}/api/persons
+Content-Type: application/json
+
+{
+  "name": "Adam Smith",
+  "number": "01-44-1234568"
+}
+
+###
+
+# NOTE: The ID here is likely random, so you should use an ID you successfully POSTed above.
+# Use an ID that exists in your deployed phonebook data.
+GET {{baseUrl}}/api/persons/5606561
+
+###
+
+# NOTE: Same caution as above for the ID.
+DELETE {{baseUrl}}/api/persons/5606561
 
 ###
